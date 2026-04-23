@@ -7,6 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/SaadDev-01/CUA-V1)
+[![Development Status](https://img.shields.io/badge/Status-Active%20Development-yellow)](https://github.com/SaadDev-01/CUA-V1)
 
 **Transform any GUI task into automated AI-driven actions**
 
@@ -38,6 +39,46 @@ CUA-V1 is a cutting-edge AI agent that automates GUI tasks using multimodal Larg
 - **Flexible**: Switch between cloud and local models instantly
 - **Powerful**: Handles complex multi-step tasks autonomously
 - **Open Source**: Fully customizable and extensible
+
+### 🚧 Development Status
+
+**CUA-V1 is currently in active development.** This is an early-stage project with a growing community of contributors.
+
+**What's Working:**
+- ✅ Multi-provider LLM support (OpenAI, Anthropic, Google, Ollama, and more)
+- ✅ Local model support via Ollama
+- ✅ Cross-platform GUI automation (Windows, macOS, Linux)
+- ✅ Multi-agent architecture (Worker, Grounding, Reflection, Code agents)
+- ✅ CLI interface for easy usage
+
+**What's Being Improved:**
+- 🔄 Performance optimizations
+- 🔄 Documentation and examples
+- 🔄 Error handling and robustness
+- 🔄 Test coverage
+
+**See the [Roadmap](#-roadmap) below for planned features and how you can help!**
+
+---
+
+## 🤝 Contribute to CUA-V1
+
+**We need your help!** CUA-V1 is an open-source project and we welcome contributions from developers of all skill levels.
+
+**Quick Ways to Help:**
+- 🐛 Report bugs you find
+- 💡 Suggest new features
+- 📖 Improve documentation
+- 🔧 Fix issues and add features
+- 🧪 Add tests
+
+**Get Started:**
+1. Check our [Roadmap](#-roadmap) for planned features
+2. Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
+3. Open an issue to discuss your idea
+4. Submit a pull request
+
+**No contribution is too small!** Whether it's fixing a typo, adding a docstring, or implementing a major feature, we appreciate all help.
 
 ---
 
@@ -326,16 +367,35 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 ---
 
 
-## Roadmap
+## 🗺️ Roadmap
 
-- [ ] Web browser-specific optimizations
-- [ ] Mobile app automation support
-- [ ] Visual task recording and replay
-- [ ] Custom model fine-tuning guide
-- [ ] Docker container for easy deployment
-- [ ] Web dashboard for task management
-- [ ] Multi-monitor support
-- [ ] Task scheduling and automation
+**CUA-V1 is actively being developed.** We welcome contributions to help us achieve these goals!
+
+### 🎯 Upcoming Features
+
+- [ ] **Web browser-specific optimizations** - Better Chrome, Firefox, Edge integration
+- [ ] **Mobile app automation support** - Android and iOS automation
+- [ ] **Visual task recording and replay** - Record actions and replay them
+- [ ] **Custom model fine-tuning guide** - Fine-tune models for specific tasks
+- [ ] **Docker container for easy deployment** - One-command setup
+- [ ] **Web dashboard for task management** - GUI for managing automation tasks
+- [ ] **Multi-monitor support** - Support for multiple displays
+- [ ] **Task scheduling and automation** - Schedule automated tasks
+
+### 🤝 How to Contribute
+
+We need your help! Here's how you can contribute:
+
+1. **Pick a roadmap item** - Choose a feature you'd like to work on
+2. **Open an issue** - Discuss your approach with the community
+3. **Submit a PR** - Implement the feature and submit a pull request
+4. **Improve existing features** - Bug fixes, optimizations, documentation
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+### 💡 Have an Idea?
+
+Don't see what you're looking for? We welcome new feature suggestions! Open an issue to discuss your idea.
 
 ---
 
