@@ -222,7 +222,6 @@ We're building the future of GUI automation. Join us.
 ### Planned Features
 
 - [ ] Web browser-specific optimizations
-- [ ] Mobile app automation (Android/iOS)
 - [ ] Visual task recording and replay
 - [ ] Custom model fine-tuning
 - [ ] Docker deployment
@@ -232,7 +231,22 @@ We're building the future of GUI automation. Join us.
 
 ### Contributing
 
-We welcome contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+**We need your help to build the future of GUI automation.**
+
+CUA-V1 is an open-source project and we welcome contributions from developers of all skill levels. You can contribute by:
+
+- **Improving existing features** - Optimize performance, fix bugs, enhance functionality
+- **Adding new features** - Implement items from the roadmap or propose new ideas
+- **Correcting issues** - Fix reported bugs and address edge cases
+- **Adding upcoming features** - Help build planned features from the roadmap
+
+**How to get started:**
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines
+2. Check the [Roadmap](#-roadmap) for planned features
+3. Open an issue to discuss your approach
+4. Submit a pull request with your changes
+
+**No contribution is too small.** Whether it's fixing a typo, improving documentation, or implementing a major feature, we appreciate all help.
 
 ---
 
