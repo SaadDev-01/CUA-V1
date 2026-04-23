@@ -4,8 +4,7 @@ setup(
     name="cua-v1",
     version="0.3.2",
     description="A library for creating general purpose GUI agents using multimodal LLMs.",
-    author="Simular AI",
-    author_email="eric@simular.ai",
+    author="SaadDev-01",
     packages=find_packages(),
     install_requires=[
         "numpy",
@@ -31,7 +30,7 @@ setup(
     extras_require={"dev": ["black"]},  # Code formatter for linting
     entry_points={
         "console_scripts": [
-            "cua_v1=gui_agents.s3.cli_app:main",
+            "cua_v1=gui_agents.cua_v1.cli_app:main",
         ],
     },
     classifiers=[
@@ -45,8 +44,8 @@ setup(
     ],
     keywords="ai, llm, gui, agent, multimodal",
     project_urls={
-        "Source": "https://github.com/simular-ai/CUA-V1",
-        "Bug Reports": "https://github.com/simular-ai/CUA-V1/issues",
+        "Source": "https://github.com/SaadDev-01/CUA-V1",
+        "Bug Reports": "https://github.com/SaadDev-01/CUA-V1/issues",
     },
     python_requires=">=3.9",
 )

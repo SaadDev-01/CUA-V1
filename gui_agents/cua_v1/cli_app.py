@@ -11,9 +11,9 @@ import time
 
 from PIL import Image
 
-from gui_agents.s3.agents.grounding import OSWorldACI
-from gui_agents.s3.agents.agent_s import CUAV1
-from gui_agents.s3.utils.local_env import LocalEnv
+from gui_agents.cua_v1.agents.grounding import OSWorldACI
+from gui_agents.cua_v1.agents.agent import CUAV1
+from gui_agents.cua_v1.utils.local_env import LocalEnv
 
 current_platform = platform.system().lower()
 
@@ -231,7 +231,7 @@ def main():
         "--provider",
         type=str,
         default="openai",
-        help="Specify the provider to use (e.g., openai, anthropic, etc.)",
+        help="Specify the provider to use (e.g., openai, anthropic, ollama for local models, etc.)",
     )
     parser.add_argument(
         "--model",

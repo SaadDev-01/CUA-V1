@@ -443,3 +443,47 @@ class LMMEngineParasail(LMMEngine):
             .choices[0]
             .message.content
         )
+
+
+class LMMEngineOllama(LMMEngine):
+    """Engine for Ollama local models - easy to use for non-technical users"""
+    def __init__(
+        self,
+        base_url=None,
+        api_key=None,
+        model=None,
+        rate_limit=-1,
+        temperature=None,
+        **kwargs,
+    ):
+        assert model is not None, "model must be provided"
+        self.model = model
+        # Default Ollama endpoint
+        self.base_url = base_url or "http://localhost:11434/v1"
+        self.api_key = api_key or "ollama"  # Ollama doesn't require real API key
+        self.request_interval = 0 if rate_limit == -1 else 60.0 / rate_limit
+        self.llm_client = None
+        self.temperature = temperature
+
+    @backoff.on_exception(
+        backoff.expo, (APIConnectionError, APIError, RateLimitError), max_time=60
+    )
+    def generate(self, messages, temperature=0.0, max_new_tokens=None, **kwargs):
+        if not self.llm_client:
+            self.llm_client = OpenAI(
+                base_url=self.base_url,
+                api_key=self.api_key,
+            )
+        # Use self.temperature if set, otherwise use the temperature argument
+        temp = self.temperature if self.temperature is not None else temperature
+        return (
+            self.llm_client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                max_tokens=max_new_tokens if max_new_tokens else 4096,
+                temperature=temp,
+                **kwargs,
+            )
+            .choices[0]
+            .message.content
+        )
