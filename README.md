@@ -5,7 +5,7 @@
 **AI-Powered GUI Automation Agent**
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/SaadDev-01/CUA-V1)
 
 **Transform any GUI task into automated AI-driven actions**
@@ -127,7 +127,7 @@ python -m gui_agents.cua_v1.cli_app \
 | Option | Description | Required |
 |--------|-------------|----------|
 | `--provider` | LLM provider (openai, anthropic, ollama, etc.) | No (default: openai) |
-| `--model` | Model name (e.g., gpt-4o, llama3.2) | No (default: gpt-5-2025-08-07) |
+| `--model` | Model name (e.g., gpt-4o, llama3.2) | No (default: gpt-4o) |
 | `--model_url` | Custom API endpoint URL | No |
 | `--model_api_key` | API key for the model | No |
 | `--ground_provider` | Grounding model provider | **Yes** |
@@ -194,18 +194,19 @@ python -m gui_agents.cua_v1.cli_app \
 
 ### Cloud Models
 
-- **OpenAI**: GPT-4o, GPT-4 Turbo, GPT-3.5
-- **Anthropic**: Claude 3.5 Sonnet, Claude 3 Opus
-- **Google**: Gemini Pro
-- **OpenRouter**: Access to 100+ models
+- **OpenAI**: GPT-4o, GPT-4.1, GPT-4 Turbo
+- **Anthropic**: Claude 4 Sonnet, Claude 4 Opus
+- **Google**: Gemini 2.0 Pro
+- **OpenRouter**: Access to 200+ models
 - **Azure OpenAI**: Enterprise Azure deployments
 
 ### Local Models (via Ollama)
 
-- **Llama 3.2**: Best balance of speed and intelligence
-- **Llama 3.1**: More capable, requires more RAM
+- **Llama 3.3**: Best balance of speed and intelligence
+- **Llama 3.2**: Lightweight, efficient for general use
 - **Mistral**: Excellent for coding tasks
-- **Phi-3**: Lightweight, fast for older computers
+- **Phi-4**: Lightweight, fast for older computers
+- **Qwen 2.5**: Strong multilingual capabilities
 
 See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for model recommendations and requirements.
 
@@ -260,10 +261,9 @@ git clone https://github.com/YOUR_USERNAME/CUA-V1.git
 cd CUA-V1
 
 # Install in development mode
-pip install -e ".[dev]"
+pip install -e .
 
-# Run tests (when available)
-pytest
+# Note: Tests are not yet implemented in this version
 ```
 
 ---
@@ -292,7 +292,7 @@ pip install -e .
 - Try restarting Ollama
 
 **Slow performance**
-- Use a smaller model (try `phi3` instead of `llama3.1`)
+- Use a smaller model (try `phi4` instead of `llama3.3`)
 - Close other applications to free up RAM
 - Check system requirements in OLLAMA_SETUP.md
 
@@ -304,9 +304,9 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 
 | Model | Speed | Accuracy | RAM Required | Best For |
 |-------|-------|----------|--------------|----------|
-| Phi-3 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
+| Phi-4 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
 | Llama 3.2 | ⚡⚡ | ⭐⭐⭐⭐ | 4GB | General use, balanced |
-| Llama 3.1 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
+| Llama 3.3 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
 | GPT-4o | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best accuracy (cloud) |
 
 ---
@@ -326,7 +326,7 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 
 ## 📝 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [license](https://opensource.org/licenses/Apache-2.0) for details.
 
 ---
 
