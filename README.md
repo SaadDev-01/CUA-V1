@@ -53,10 +53,10 @@ ollama pull llama3.2
 # Run CUA-V1
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.2 \
+    --model llama3.3 \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.2 \
+    --ground_model llama3.3 \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open Chrome and search for AI automation"
@@ -67,11 +67,11 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider openai \
-    --model gpt-4o \
+    --model gpt-5.4 \
     --ground_provider openai \
     --ground_url https://api.openai.com/v1 \
     --ground_api_key YOUR_API_KEY \
-    --ground_model gpt-4o \
+    --ground_model gpt-5.4 \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Your task here"
@@ -79,7 +79,7 @@ python -m gui_agents.cua_v1.cli_app \
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -106,7 +106,7 @@ See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for detailed instructions.
 
 ---
 
-## 💡 Usage
+## Usage
 
 ### Basic Command Structure
 
@@ -142,17 +142,17 @@ python -m gui_agents.cua_v1.cli_app \
 
 ---
 
-## 📚 Examples
+## Examples
 
 ### Web Automation
 
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.2 \
+    --model llama3.3 \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.2 \
+    --ground_model llama3.3 \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open GitHub, search for CUA-V1 repository, and star it"
@@ -163,10 +163,10 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.2 \
+    --model llama3.3 \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.2 \
+    --ground_model llama3.3 \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open Notepad, type 'Hello from CUA-V1', and save the file"
@@ -177,11 +177,11 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider openai \
-    --model gpt-4o \
+    --model gpt-5.4 \
     --ground_provider openai \
     --ground_url https://api.openai.com/v1 \
     --ground_api_key YOUR_API_KEY \
-    --ground_model gpt-4o \
+    --ground_model gpt-5.4 \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --enable_reflection \
@@ -190,14 +190,16 @@ python -m gui_agents.cua_v1.cli_app \
 
 ---
 
-## 🧠 Supported Models
+## Supported Models
 
 ### Cloud Models
 
-- **OpenAI**: GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo
-- **Anthropic**: Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku
-- **Google**: Gemini 1.5 Pro, Gemini 1.5 Flash
-- **OpenRouter**: Access to 100+ models
+- **OpenAI**: GPT-5.4, GPT-4o, GPT-4 Turbo
+- **Anthropic**: Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4
+- **Google**: Gemini 3.1 Pro, Gemini 3.1 Flash-Lite
+- **xAI**: Grok 4.20
+- **Mistral**: Mistral Small 4, Mistral Large 4
+- **OpenRouter**: Access to 500+ models
 - **Azure OpenAI**: Enterprise Azure deployments
 - **HuggingFace**: Access to open models via Inference Endpoints
 - **vLLM**: Self-hosted models
@@ -205,18 +207,20 @@ python -m gui_agents.cua_v1.cli_app \
 
 ### Local Models (via Ollama)
 
-- **Llama 3.2**: Best balance of speed and intelligence (3B, 1B variants available)
+- **Llama 3.3**: Latest Meta model, best balance of speed and intelligence
+- **Llama 3.2**: Lightweight, efficient for general use (3B, 1B variants)
 - **Llama 3.1**: More capable, requires more RAM (8B, 70B variants)
-- **Mistral**: Excellent for coding tasks
-- **Phi-3**: Lightweight, fast for older computers (Mini, Medium variants)
+- **Mistral 7B**: Excellent for coding tasks
+- **Phi-4**: Microsoft's lightweight model, fast for older computers
 - **Qwen 2.5**: Strong multilingual capabilities
 - **Gemma 2**: Google's open models
+- **DeepSeek**: Powerful open-source reasoning model
 
 See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for model recommendations and requirements.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 CUA-V1 uses a sophisticated multi-agent architecture:
 
@@ -246,7 +250,7 @@ CUA-V1 uses a sophisticated multi-agent architecture:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from everyone! CUA-V1 is an open-source project and we believe in the power of community collaboration.
 
@@ -291,7 +295,7 @@ pip install -e .
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 - [OLLAMA_SETUP.md](OLLAMA_SETUP.md) - Setup guide for local models
 - [Examples](#-examples) - Usage examples
@@ -299,7 +303,7 @@ pip install -e .
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -315,7 +319,7 @@ pip install -e .
 - Try restarting Ollama
 
 **Slow performance**
-- Use a smaller model (try `phi3` instead of `llama3.1`)
+- Use a smaller model (try `phi4` instead of `llama3.3`)
 - Close other applications to free up RAM
 - Check system requirements in OLLAMA_SETUP.md
 
@@ -323,19 +327,20 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 
 ---
 
-## 📊 Performance
+## Performance
 
 | Model | Speed | Accuracy | RAM Required | Best For |
 |-------|-------|----------|--------------|----------|
-| Phi-3 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
+| Phi-4 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
 | Llama 3.2 | ⚡⚡ | ⭐⭐⭐⭐ | 4GB | General use, balanced |
-| Llama 3.1 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
-| GPT-4o | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best accuracy (cloud) |
-| Claude 3.5 Sonnet | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best reasoning (cloud) |
+| Llama 3.3 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
+| GPT-5.4 | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best accuracy (cloud) |
+| Claude Sonnet 4.6 | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best reasoning (cloud) |
+| Gemini 3.1 Pro | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best multimodal (cloud) |
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Web browser-specific optimizations
 - [ ] Mobile app automation support
