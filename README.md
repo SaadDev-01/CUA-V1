@@ -413,14 +413,6 @@ This project is licensed under the Apache License 2.0 - see the [license](https:
 
 ---
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/SaadDev-01/CUA-V1/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/SaadDev-01/CUA-V1/discussions)
-- **Email**: For business inquiries
-
----
-
 <div align="center">
 
 **⭐ If you find CUA-V1 useful, please star the repository! ⭐**
