@@ -84,7 +84,13 @@ CUA-V1/
 ├── setup.py                 # Package configuration
 ├── requirements.txt         # Dependencies
 ├── README.md               # Main documentation
-└── OLLAMA_SETUP.md         # Ollama setup guide
+├── ARCHITECTURE.md         # System architecture
+├── API.md                  # API reference
+├── OLLAMA_SETUP.md         # Ollama setup guide
+├── CONTRIBUTING.md         # Contribution guidelines
+├── CODE_OF_CONDUCT.md      # Community standards
+├── CHANGELOG.md            # Version history
+└── LICENSE                 # Apache 2.0 license
 ```
 
 ## 🎯 Areas for Contribution

@@ -252,9 +252,12 @@ CUA-V1 is an open-source project and we welcome contributions from developers of
 
 ## Documentation
 
+- [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture and design
+- [API.md](API.md) - API reference and usage
 - [OLLAMA_SETUP.md](OLLAMA_SETUP.md) - Local model setup guide
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Community standards
+- [CHANGELOG.md](CHANGELOG.md) - Version history and changes
 
 ---
 
