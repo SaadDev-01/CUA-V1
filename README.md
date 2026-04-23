@@ -248,14 +248,33 @@ CUA-V1 uses a sophisticated multi-agent architecture:
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+We welcome contributions from everyone! CUA-V1 is an open-source project and we believe in the power of community collaboration.
 
+**How to Contribute:**
+- 🐛 Report bugs and issues
+- 💡 Suggest new features and enhancements
+- 🔧 Submit pull requests with fixes and improvements
+- 📖 Improve documentation
+- 🧪 Add tests and improve code quality
+
+**Getting Started:**
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on how to contribute.
+
+**Quick Steps:**
 1. **Star the repository** ⭐
 2. **Fork the repository**
 3. **Create a feature branch**: `git checkout -b feature/amazing-feature`
 4. **Commit your changes**: `git commit -m 'Add amazing feature'`
 5. **Push to the branch**: `git push origin feature/amazing-feature`
 6. **Open a Pull Request**
+
+**Areas We Need Help:**
+- Adding support for new LLM providers
+- Improving performance and optimization
+- Creating example use cases
+- Writing documentation
+- Testing across different platforms
+- Bug fixes and improvements
 
 ### Development Setup
 
