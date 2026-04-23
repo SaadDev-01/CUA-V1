@@ -47,16 +47,16 @@ CUA-V1 is a cutting-edge AI agent that automates GUI tasks using multimodal Larg
 
 ```bash
 # Install Ollama from https://ollama.com/download
-# Download a model
-ollama pull llama3.2
+# Download a model (e.g., llama3.2, phi4, etc.)
+ollama pull YOUR_MODEL_NAME
 
 # Run CUA-V1
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.3 \
+    --model YOUR_MODEL_NAME \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.3 \
+    --ground_model YOUR_MODEL_NAME \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open Chrome and search for AI automation"
@@ -67,11 +67,11 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider openai \
-    --model gpt-5.4 \
+    --model YOUR_MODEL_NAME \
     --ground_provider openai \
     --ground_url https://api.openai.com/v1 \
     --ground_api_key YOUR_API_KEY \
-    --ground_model gpt-5.4 \
+    --ground_model YOUR_MODEL_NAME \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Your task here"
@@ -149,10 +149,10 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.3 \
+    --model YOUR_MODEL_NAME \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.3 \
+    --ground_model YOUR_MODEL_NAME \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open GitHub, search for CUA-V1 repository, and star it"
@@ -163,10 +163,10 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider ollama \
-    --model llama3.3 \
+    --model YOUR_MODEL_NAME \
     --ground_provider ollama \
     --ground_url http://localhost:11434/v1 \
-    --ground_model llama3.3 \
+    --ground_model YOUR_MODEL_NAME \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --task "Open Notepad, type 'Hello from CUA-V1', and save the file"
@@ -177,11 +177,11 @@ python -m gui_agents.cua_v1.cli_app \
 ```bash
 python -m gui_agents.cua_v1.cli_app \
     --provider openai \
-    --model gpt-5.4 \
+    --model YOUR_MODEL_NAME \
     --ground_provider openai \
     --ground_url https://api.openai.com/v1 \
     --ground_api_key YOUR_API_KEY \
-    --ground_model gpt-5.4 \
+    --ground_model YOUR_MODEL_NAME \
     --grounding_width 1920 \
     --grounding_height 1080 \
     --enable_reflection \
@@ -192,13 +192,13 @@ python -m gui_agents.cua_v1.cli_app \
 
 ## Supported Models
 
-### Cloud Models
+### Cloud Providers
 
-- **OpenAI**: GPT-5.4, GPT-4o, GPT-4 Turbo
-- **Anthropic**: Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4
-- **Google**: Gemini 3.1 Pro, Gemini 3.1 Flash-Lite
-- **xAI**: Grok 4.20
-- **Mistral**: Mistral Small 4, Mistral Large 4
+- **OpenAI**: GPT series models
+- **Anthropic**: Claude series models
+- **Google**: Gemini series models
+- **xAI**: Grok models
+- **Mistral**: Mistral models
 - **OpenRouter**: Access to 500+ models
 - **Azure OpenAI**: Enterprise Azure deployments
 - **HuggingFace**: Access to open models via Inference Endpoints
@@ -207,14 +207,12 @@ python -m gui_agents.cua_v1.cli_app \
 
 ### Local Models (via Ollama)
 
-- **Llama 3.3**: Latest Meta model, best balance of speed and intelligence
-- **Llama 3.2**: Lightweight, efficient for general use (3B, 1B variants)
-- **Llama 3.1**: More capable, requires more RAM (8B, 70B variants)
-- **Mistral 7B**: Excellent for coding tasks
-- **Phi-4**: Microsoft's lightweight model, fast for older computers
-- **Qwen 2.5**: Strong multilingual capabilities
-- **Gemma 2**: Google's open models
-- **DeepSeek**: Powerful open-source reasoning model
+- **Llama**: Meta's open models (various sizes)
+- **Mistral**: Coding-focused models
+- **Phi**: Microsoft's lightweight models
+- **Qwen**: Multilingual models
+- **Gemma**: Google's open models
+- **DeepSeek**: Open-source reasoning models
 
 See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for model recommendations and requirements.
 
@@ -319,7 +317,7 @@ pip install -e .
 - Try restarting Ollama
 
 **Slow performance**
-- Use a smaller model (try `phi4` instead of `llama3.3`)
+- Use a smaller model
 - Close other applications to free up RAM
 - Check system requirements in OLLAMA_SETUP.md
 
@@ -327,18 +325,6 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 
 ---
 
-## Performance
-
-| Model | Speed | Accuracy | RAM Required | Best For |
-|-------|-------|----------|--------------|----------|
-| Phi-4 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
-| Llama 3.2 | ⚡⚡ | ⭐⭐⭐⭐ | 4GB | General use, balanced |
-| Llama 3.3 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
-| GPT-5.4 | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best accuracy (cloud) |
-| Claude Sonnet 4.6 | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best reasoning (cloud) |
-| Gemini 3.1 Pro | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best multimodal (cloud) |
-
----
 
 ## Roadmap
 
