@@ -13,7 +13,7 @@
 
 Transform any GUI task into automated AI-driven actions with state-of-the-art multimodal LLMs.
 
-[Documentation](#-documentation) • [Quick Start](#-quick-start) • [Installation](#-installation) • [Contributing](#-contributing)
+[Specification](#-documentation) • [Quick Start](#-quick-start) • [Installation](#-installation) • [Contributing](#-contributing)
 
 </div>
 
@@ -252,12 +252,15 @@ CUA-V1 is an open-source project and we welcome contributions from developers of
 
 ## Documentation
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture and design
+### Primary Documentation
+- **[SOFTWARE_SPECIFICATION.md](SOFTWARE_SPECIFICATION.md)** - Complete software specification with all features, architecture, and usage details
+
+### Additional Resources
+- [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture deep dive
 - [API.md](API.md) - API reference and usage
 - [OLLAMA_SETUP.md](OLLAMA_SETUP.md) - Local model setup guide
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Community standards
-- [CHANGELOG.md](CHANGELOG.md) - Version history and changes
 
 ---
 

@@ -70,6 +70,13 @@ We welcome pull requests! Here's how to contribute:
 - Update docstrings for modified functions
 - Add examples for new functionality
 
+## 📚 Documentation for Contributors
+
+Before contributing, please read:
+- **[SOFTWARE_SPECIFICATION.md](SOFTWARE_SPECIFICATION.md)** - Complete system specification with all features, architecture, and development guidelines
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture details
+- **[API.md](API.md)** - API reference
+
 ## 🏗️ Project Structure
 
 ```
@@ -83,14 +90,14 @@ CUA-V1/
 │       └── cli_app.py       # CLI entry point
 ├── setup.py                 # Package configuration
 ├── requirements.txt         # Dependencies
-├── README.md               # Main documentation
-├── ARCHITECTURE.md         # System architecture
-├── API.md                  # API reference
-├── OLLAMA_SETUP.md         # Ollama setup guide
-├── CONTRIBUTING.md         # Contribution guidelines
-├── CODE_OF_CONDUCT.md      # Community standards
-├── CHANGELOG.md            # Version history
-└── LICENSE                 # Apache 2.0 license
+├── README.md                    # Main documentation
+├── SOFTWARE_SPECIFICATION.md    # Complete software specification
+├── ARCHITECTURE.md              # System architecture
+├── API.md                       # API reference
+├── OLLAMA_SETUP.md              # Ollama setup guide
+├── CONTRIBUTING.md              # Contribution guidelines
+├── CODE_OF_CONDUCT.md           # Community standards
+└── LICENSE                      # Apache 2.0 license
 ```
 
 ## 🎯 Areas for Contribution
