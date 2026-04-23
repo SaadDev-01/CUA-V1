@@ -194,19 +194,23 @@ python -m gui_agents.cua_v1.cli_app \
 
 ### Cloud Models
 
-- **OpenAI**: GPT-4o, GPT-4.1, GPT-4 Turbo
-- **Anthropic**: Claude 4 Sonnet, Claude 4 Opus
-- **Google**: Gemini 2.0 Pro
-- **OpenRouter**: Access to 200+ models
+- **OpenAI**: GPT-4o, GPT-4 Turbo, GPT-3.5 Turbo
+- **Anthropic**: Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku
+- **Google**: Gemini 1.5 Pro, Gemini 1.5 Flash
+- **OpenRouter**: Access to 100+ models
 - **Azure OpenAI**: Enterprise Azure deployments
+- **HuggingFace**: Access to open models via Inference Endpoints
+- **vLLM**: Self-hosted models
+- **Parasail**: High-performance inference
 
 ### Local Models (via Ollama)
 
-- **Llama 3.3**: Best balance of speed and intelligence
-- **Llama 3.2**: Lightweight, efficient for general use
+- **Llama 3.2**: Best balance of speed and intelligence (3B, 1B variants available)
+- **Llama 3.1**: More capable, requires more RAM (8B, 70B variants)
 - **Mistral**: Excellent for coding tasks
-- **Phi-4**: Lightweight, fast for older computers
+- **Phi-3**: Lightweight, fast for older computers (Mini, Medium variants)
 - **Qwen 2.5**: Strong multilingual capabilities
+- **Gemma 2**: Google's open models
 
 See [OLLAMA_SETUP.md](OLLAMA_SETUP.md) for model recommendations and requirements.
 
@@ -292,7 +296,7 @@ pip install -e .
 - Try restarting Ollama
 
 **Slow performance**
-- Use a smaller model (try `phi4` instead of `llama3.3`)
+- Use a smaller model (try `phi3` instead of `llama3.1`)
 - Close other applications to free up RAM
 - Check system requirements in OLLAMA_SETUP.md
 
@@ -304,10 +308,11 @@ For more troubleshooting, see [OLLAMA_SETUP.md](OLLAMA_SETUP.md).
 
 | Model | Speed | Accuracy | RAM Required | Best For |
 |-------|-------|----------|--------------|----------|
-| Phi-4 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
+| Phi-3 | ⚡⚡⚡ | ⭐⭐⭐ | 4GB | Quick tasks, older computers |
 | Llama 3.2 | ⚡⚡ | ⭐⭐⭐⭐ | 4GB | General use, balanced |
-| Llama 3.3 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
+| Llama 3.1 | ⚡ | ⭐⭐⭐⭐⭐ | 8GB | Complex tasks |
 | GPT-4o | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best accuracy (cloud) |
+| Claude 3.5 Sonnet | ⚡⚡ | ⭐⭐⭐⭐⭐ | N/A | Best reasoning (cloud) |
 
 ---
 
